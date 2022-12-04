@@ -1,7 +1,7 @@
 import { assert } from 'console'
 import sinon from 'sinon'
 import { HbApi } from '../src/main'
-import { HbRawAPIResponse, HttpClient } from '../src/interface'
+import { HbRawAPIResponse, HttpClient } from '../src/mainTypes'
 import { logger as silentLogger } from './silentLogger'
 import { stubHttpClientProxy } from './stubHttpClientProxy'
 

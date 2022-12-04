@@ -5,7 +5,7 @@ import url from 'url'
 import qs from 'qs'
 import { logger as defaultLogger } from './defaultLogger'
 import { httpClient as defaultHttpClient } from './defaultHttpClient'
-import { Logger, HttpClient, HbRawAPIResponse, HbApiResponse } from './interface'
+import { Logger, HttpClient, HbRawAPIResponse, HbApiResponse } from './mainTypes'
 
 const DEFAULT_HEADERS = {
     'Content-Type': 'application/json',
