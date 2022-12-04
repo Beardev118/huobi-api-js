@@ -5,6 +5,7 @@ import url from 'url'
 import qs from 'qs'
 import { logger as defaultLogger } from './defaultLogger'
 import { httpClient as defaultHttpClient } from './defaultHttpClient'
+import { Logger, HttpClient, HbRawAPIResponse, HbApiResponse } from './interface'
 
 const DEFAULT_HEADERS = {
     'Content-Type': 'application/json',
@@ -172,7 +173,7 @@ class HbApi {
                 })
                 return null
             }
-        } catch (error) {
+        } catch (error: any) {
             this.logger.error(`API error. method=[${method}], url=[${url}]`, {
                 error: error.message,
                 stack: error.stack,

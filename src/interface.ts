@@ -1,7 +1,7 @@
 /**
  * types for HB API
  */
-declare class HbApi {
+export declare class HbApi {
     constructor({
         apiBaseUrl,
         profileConfig,
@@ -14,7 +14,7 @@ declare class HbApi {
             secretKey: string
         }
         logger?: Logger
-        httpClient?: HttpClient
+        httpClient?: HttpClient<HbRawAPIResponse>
     })
 
     /**
@@ -39,12 +39,12 @@ declare class HbApi {
 /**
  * HB API returning type
  */
-declare type HbApiResponse = Record<string, unknown> | unknown[] | null
+export declare type HbApiResponse = Record<string, unknown> | unknown[] | null
 
 /**
  * Logger interface
  */
-declare interface Logger {
+export declare interface Logger {
     info: (msg: string, params?: Record<string, unknown>) => void
     debug: (msg: string, params?: Record<string, unknown>) => void
     error: (msg: string, params?: Record<string, unknown>) => void
@@ -54,7 +54,7 @@ declare interface Logger {
 /**
  * HTTP client interface
  */
-declare type HttpClient<T> = (args: {
+export declare type HttpClient<T> = (args: {
     url: string
     method: string
     headers?: Record<string, string>
@@ -72,7 +72,7 @@ declare type HttpClient<T> = (args: {
 /**
  * Raw HB API response type
  */
-declare interface HbRawAPIResponse {
+export declare interface HbRawAPIResponse {
     status?: string
     code?: number
     data: HbApiResponse
