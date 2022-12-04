@@ -1,5 +1,5 @@
 'use strict'
-import { Logger } from './interface'
+import { Logger } from './mainTypes'
 
 const logger: Logger = {
     info: function (msg: string, params?: Record<string, unknown>): void {
