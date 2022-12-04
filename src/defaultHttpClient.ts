@@ -3,6 +3,7 @@
 import axios from 'axios'
 import http from 'http'
 import https from 'https'
+import { HttpClient } from './interface'
 
 const httpAgent = new http.Agent({
     keepAlive: true,
